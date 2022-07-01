@@ -24,13 +24,4 @@ jobs:
 
     - name: Test with pytest
       run: |
-        python -m pytest --cov calculator --cov-report xml
-    
-    - name: Generate Coverage Report
-      uses: danpetitt/open-cover-badge-generator-action@v1.0.10
-      with:
-        path-to-opencover-xml: coverage.xml
-        minimum-coverage: 75
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-    
+        python -m pytest --cov calculator --cov-fail-under=75
