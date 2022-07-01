@@ -8,4 +8,4 @@ class Calculator:
         return x + y
     
     def multiply(self, x: int, y: int):
-        return x * y
+        return x ** y
